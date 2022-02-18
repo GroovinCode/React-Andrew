@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'; 
+import { Foot, Grid, Head, Main, Nav, Side } from './Components/Grid';
+import { PageTitle } from './Components/PageTitle';
+import { Menus } from './Components/Menus';
+import { Outlet } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Grid>
+
+        <Head> 
+          <PageTitle>
+          </PageTitle>
+        </Head>
+
+        <Nav>
+          <Menus>
+          </Menus>
+        </Nav>
+
+        <Side></Side>
+      
+        <Main>   
+          <Outlet>
+          </Outlet>
+        </Main>
+        
+        <Foot></Foot>
+
+      </Grid>
     </div>
   );
 }
-
-export default App;
