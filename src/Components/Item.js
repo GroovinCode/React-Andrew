@@ -37,7 +37,7 @@ export function Item(props) {
               
         <Content>           
           <p key={title}>{id.title}</p> 
-          <p key={id}>${id.price}</p>        
+          <p key={id}>${id.price.toFixed(2)}</p>        
         </Content>
         </div>
       </ProductCard>
